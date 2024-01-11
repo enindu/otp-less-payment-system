@@ -1,5 +1,9 @@
 # OTP-Less Payment System
 
+See following link for more details.
+
+Link: [https://enindu.com/blog/otp-less-payment-system](https://enindu.com/blog/otp-less-payment-system)
+
 ## SSL Keys And Certificates
 
 If alredy included SSL keys and certificates didn't work, use `config.conf` file to generate SSL keys and certificate. You may need to generate keys and certificates for every component.
