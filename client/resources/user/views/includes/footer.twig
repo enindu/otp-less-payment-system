@@ -1,0 +1,61 @@
+<footer class="footer-1">
+  <div class="footer-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="footer-content logo-footer">
+            <div class="footer-head">
+              <div class="footer-logo">
+                <a class="footer-black-logo" href="/"><img src="/resources/user/assets/images/logo.svg" alt="{{ app.name }} logo"></a>
+              </div>
+              <p>Replacing a maintains the amount of lines. When replacing a selection. help agencies to define their new business objectives and then create. Replacing a maintains the amount of lines.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-3 col-xs-12">
+          <div class="footer-content">
+            <div class="footer-head">
+              <h4>Quick Links</h4>
+              <ul class="footer-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-3 col-xs-12">
+          <div class="footer-content">
+            <div class="footer-head">
+              <h4>Account</h4>
+              <ul class="footer-list">
+                {% if auth.user.logged %}
+                  <li><a href="/accounts/profile">Profile</a></li>
+                  <li><a href="/accounts/logout">Logout</a></li>
+                {% else %}
+                  <li><a href="/accounts/register">Register</a></li>
+                  <li><a href="/accounts/login">Login</a></li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-area-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="copyright">
+            <p>
+              Copyright &copy; {{ "now"|date("Y") }} <a href="/">{{ app.name }}</a>.
+              All Rights Reserved.
+              Designed By <a href="#" target="_blank" rel="noopener noreferrer">Vihanga Hasintha</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

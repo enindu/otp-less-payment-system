@@ -1,0 +1,126 @@
+{% extends "@user/layouts/sub.twig" %}
+
+{% set id = "accounts.settings" %}
+{% set title = "Settings | Accounts" %}
+
+{% block breadcrumb_content %}
+<div class="page-area">
+  <div class="breadcumb-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="breadcrumb text-center">
+          <div class="section-headline white-headline text-center">
+            <h3>Settings</h3>
+          </div>
+          <ul>
+            <li class="home-bread">Accounts</li>
+            <li>Settings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block sub_content %}
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="send-money-form">
+      <div class="form-text">
+        <h4 class="form-top" id="change-information">Change Information</h4>
+        <div class="form-inner">
+          <form action="/accounts/change-information" method="post">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <label>Enter your first name <span class="text-danger">*</span></label>
+                <input type="text" name="first-name" placeholder="First Name" maxlength="191" value="{{ auth.user.first_name }}" required>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <label>Enter your last name <span class="text-danger">*</span></label>
+                <input type="text" name="last-name" placeholder="Last Name" maxlength="191" value="{{ auth.user.last_name }}" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <label>Enter your NIC number (Read only)</label>
+                <input type="text" value="{{ auth.user.nic }}" disabled>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <label>Enter your email (Read only)</label>
+                <input type="email" value="{{ auth.user.email }}" disabled>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <label>Enter your phone number (Read only)</label>
+                <input type="tel" value="{{ auth.user.phone }}" disabled>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <label>Enter your account number (Read only)</label>
+                <input type="tel" value="{{ auth.user.account }}" disabled>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <label>Enter your device ID (Read only)</label>
+                <input type="text" value="{{ auth.user.device_id }}" disabled>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <label>Enter your current password <span class="text-danger">*</span></label>
+                <input type="password" name="current-password" placeholder="Current Password" minlength="6" maxlength="32" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <button type="submit">Update</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="send-money-form">
+      <div class="form-text">
+        <h4 class="form-top" id="change-password">Change Password</h4>
+        <div class="form-inner">
+          <form action="/accounts/change-password" method="post">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <label>Enter your current password <span class="text-danger">*</span></label>
+                <input type="password" name="current-password" placeholder="Current Password" minlength="6" maxlength="32" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <label>Enter your new password <span class="text-danger">*</span></label>
+                <input type="password" name="new-password" placeholder="New Password" minlength="6" maxlength="32" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <label>Confirm your current password <span class="text-danger">*</span></label>
+                <input type="password" name="confirm-new-password" placeholder="Confirm New Password" minlength="6" maxlength="32" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <button type="submit">Update</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

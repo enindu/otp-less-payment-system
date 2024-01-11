@@ -1,0 +1,43 @@
+{% extends "@admin/layouts/sub-2.twig" %}
+
+{% set id = "messages.single" %}
+{% set title = message.subject|title ~ " | Messages" %}
+
+{% block sub_content %}
+<div class="container-fluid">
+  <div class="row row-eq-spacing align-items-center">
+    <div class="col-12 col-sm-auto mb-20 mb-sm-0">
+      <a href="#" id="back" class="btn">
+        <i class="fa fa-chevron-left mr-5"></i> Back
+      </a>
+    </div>
+    <div class="col-12 col-sm-auto">
+      <h4 class="my-0">
+        <i class="fa fa-comment mr-5"></i> {{ message.subject }}
+      </h4>
+    </div>
+  </div>
+  <div class="row row-eq-spacing">
+    <div class="col-12">
+      <div class="card p-15">
+        <h1 class="card-title">
+          <i class="fa fa-comment mr-5"></i> {{ message.subject }}
+        </h1>
+        <p>{{ message.message }}</p>
+        <p class="mb-0">From {{ message.name }}, <br> {{ message.email }}</p>
+        <div class="d-flex justify-content-end">
+          <a href="mailto:{{ message.email }}" class="btn mr-5">
+            <i class="fa fa-share mr-5"></i> Reply
+          </a>
+          <form action="/admin/subcategories/remove" method="post">
+            <input type="hidden" name="id" value="{{ message.id }}">
+            <button class="btn btn-danger">
+              <i class="fa fa-trash-alt mr-5"></i> Remove
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

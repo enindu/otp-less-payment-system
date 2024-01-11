@@ -1,0 +1,15 @@
+{% extends "@common/layouts/base.twig" %}
+
+{% block base_content %}
+<div class="page-wrapper">
+  <div class="content-wrapper">
+    <div class="container h-full">
+      <div class="row justify-content-center align-items-center h-full">
+        <div class="col-auto text-center">
+          {% block sub_content %}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

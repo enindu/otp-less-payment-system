@@ -1,0 +1,43 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # RewriteCond %{HTTP_HOST} !=""
+  # RewriteCond %{HTTP_HOST} !^www\. [NC]
+  # RewriteCond %{HTTPS}s ^on(s)|
+  # RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} (.+)/$
+  RewriteRule ^ %1 [R,L]
+
+  RewriteRule /?\.gitignore$ - [F,L]
+  RewriteRule /?\.htaccess$ - [F,L]
+  RewriteRule /?\.json$ - [F,L]
+  RewriteRule /?\.lock$ - [F,L]
+
+  RewriteRule ^app/.* index.php [F,L]
+  RewriteRule ^cache/.* index.php [F,L]
+  RewriteRule ^libraries/.* index.php [F,L]
+  RewriteRule ^logs/.* index.php [F,L]
+  RewriteRule ^resources/admin/views/.* index.php [F,L]
+  RewriteRule ^resources/common/views/.* index.php [F,L]
+  RewriteRule ^resources/user/views/.* index.php [F,L]
+  RewriteRule ^settings/.* index.php [F,L]
+  RewriteRule ^sources/.* index.php [F,L]
+  RewriteRule ^system/.* index.php [F,L]
+  RewriteRule ^vendor/.* index.php [F,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# <IfModule mod_deflate.c>
+#   AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/javascript application/json
+# </IfModule>
+
+# <IfModule mod_headers.c>
+#   <FilesMatch "\.(html|ico|pdf|jpg|jpeg|png|gif|js|css|webp|svg|ttf|woff|woff2|eot)$">
+#     Header set Cache-Control "public, max-age=31536000"
+#   </FilesMatch>
+# </IfModule>

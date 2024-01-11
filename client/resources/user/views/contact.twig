@@ -1,0 +1,90 @@
+{% extends "@user/layouts/base-1.twig" %}
+
+{% set id = "contact" %}
+{% set title = "Contact Us" %}
+
+{% block breadcrumb_content %}
+<div class="page-area">
+  <div class="breadcumb-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="breadcrumb text-center">
+          <div class="section-headline white-headline text-center">
+            <h3>Contact Us</h3>
+          </div>
+          <ul>
+            <li class="home-bread">Home</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block base_content %}
+<div class="contact-area bg-color area-padding">
+  <div class="container">
+    <div class="row">
+      <div class="contact-inner">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="contact-icon text-center">
+            <div class="single-icon">
+              <i class="fa fa-mobile"></i>
+              <p>Phone: 000 0 000 000 <br> 24/7 Support</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="contact-icon text-center">
+            <div class="single-icon">
+              <i class="fa fa-envelope-o"></i>
+              <p>Info: info@example.com <br> Support: support@example.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+          <div class="contact-icon text-center">
+            <div class="single-icon">
+              <i class="fa fa-map-marker"></i>
+              <p>Location: No. 0, Dummy Road, <br> Dummy City</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="contact-images">
+          <img src="/resources/user/assets/images/contact.jpg" alt="{{ app.name }} contact">
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="contact-form">
+          <div class="row">
+            <form method="post" action="/contact" class="contact-form">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" class="form-control" placeholder="Enter Your Name" name="name" maxlength="191" required>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="email" class="email form-control" placeholder="Enter Your Email" name="email" maxlength="191" required>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <input type="text" class="form-control" placeholder="Enter Subject" name="subject" maxlength="191" required>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <textarea rows="7" placeholder="Enter Massage" class="form-control" name="message" maxlength="1000" required></textarea>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                <button type="submit" class="add-btn contact-btn">Send Message</button>
+              </div>   
+            </form>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

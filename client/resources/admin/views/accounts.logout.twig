@@ -1,0 +1,25 @@
+{% extends "@admin/layouts/sub-1.twig" %}
+
+{% set id = "accounts.logout" %}
+{% set title = "Logout | Accounts" %}
+
+{% block sub_content %}
+<div class="card p-15">
+  <h1 class="card-title">
+    <i class="fa fa-sign-out-alt mr-5"></i> Logout
+  </h1>
+  <form action="/admin/accounts/logout" method="post">
+    <div class="form-group">
+      <span>Are you sure, you want to logout?</span>
+    </div>
+    <div class="text-right">
+      <a href="#" id="back" class="btn mr-5">
+        <i class="fa fa-times mr-5"></i> Cancel
+      </a>
+      <button class="btn btn-danger">
+        <i class="fa fa-sign-out-alt mr-5"></i> Logout
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}

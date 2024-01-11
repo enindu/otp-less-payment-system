@@ -1,0 +1,33 @@
+{% extends "@user/layouts/sub.twig" %}
+
+{% set id = "accounts.profile" %}
+{% set title = auth.user.first_name ~ " " ~ auth.user.last_name ~ " | Accounts" %}
+
+{% block breadcrumb_content %}
+<div class="page-area">
+  <div class="breadcumb-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="breadcrumb text-center">
+          <div class="section-headline white-headline text-center">
+            <h3>{{ auth.user.first_name ~ " " ~ auth.user.last_name }}</h3>
+          </div>
+          <ul>
+            <li class="home-bread">Accounts</li>
+            <li>Profile</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block sub_content %}
+<div class="row hidden-xs">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <img src="/uploads/images/{{ advertisement.file }}" alt="{{ app.name }} advertisement" class="img-responsive">
+  </div>
+</div>
+{% endblock %}

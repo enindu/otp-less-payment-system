@@ -1,0 +1,68 @@
+{% extends "@user/layouts/sub.twig" %}
+
+{% set id = "actions.pay-online" %}
+{% set title = "Pay Online | Actions" %}
+
+{% block breadcrumb_content %}
+<div class="page-area">
+  <div class="breadcumb-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="breadcrumb text-center">
+          <div class="section-headline white-headline text-center">
+            <h3>Pay Online</h3>
+          </div>
+          <ul>
+            <li class="home-bread">Actions</li>
+            <li>Pay Online</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block sub_content %}
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="send-money-form">
+      <div class="form-text">
+        <h4 class="form-top">Pay Online</h4>
+        <div class="form-inner">
+          <form action="/actions/pay-online" method="post">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <label>Choose payee account <span class="text-danger">*</span></label>
+                <select name="payee-id" required>
+                  {% for item in payees %}
+                    <option value="{{ item.id }}">{{ item.title }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <label>Enter payment amount <span class="text-danger">*</span></label>
+                <input type="number" name="amount" placeholder="Payment Amount" min="100" max="1000000" step="0.1" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <label>Enter payee account number <span class="text-danger">*</span></label>
+                <input type="text" name="description" placeholder="Account Number" maxlength="500" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <button type="submit">Pay</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <base href="{{ app.url }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="{{ app.description }}">
+  <meta name="keywords" content="{{ app.keywords }}">
+  <meta name="author" content="{{ app.author }}">
+  <title>{{ title }} | {{ app.name }}</title>
+  <link rel="icon" href="/resources/user/assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap">
+  <link rel="stylesheet" href="/resources/user/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/owl-carousel.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/owl-transitions.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/animate.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/nice-select.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/mean-menu.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/font-awesome.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/themify-icons.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/flaticon.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/magnific.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/style.css">
+  <link rel="stylesheet" href="/resources/user/assets/css/responsive.css">
+  <script src="/resources/user/assets/js/modernizr.js"></script>
+</head>
+<body>
+  {% include "@user/includes/preloader.twig" %}
+  {% include "@user/includes/header.twig" %}
+  {% block breadcrumb_content %}{% endblock %}
+  {% block base_content %}{% endblock %}
+  {% include "@user/includes/footer.twig" %}
+  <script src="/resources/user/assets/js/jquery.js"></script>
+  <script src="/resources/user/assets/js/bootstrap.js"></script>
+  <script src="/resources/user/assets/js/owl-carousel.js"></script>
+  <script src="/resources/user/assets/js/stellar.js"></script>
+  <script src="/resources/user/assets/js/magnific.js"></script>
+  <script src="/resources/user/assets/js/nice-select.js"></script>
+  <script src="/resources/user/assets/js/wow.js"></script>
+  <script src="/resources/user/assets/js/mean-menu.js"></script>
+  <script src="/resources/user/assets/js/form-validator.js"></script>
+  <script src="/resources/user/assets/js/plugins.js"></script>
+  <script src="/resources/user/assets/js/script.js"></script>
+</body>
+</html>

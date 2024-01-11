@@ -1,0 +1,45 @@
+{% extends "@common/layouts/sub-1.twig" %}
+
+{% set id = "error" %}
+{% set title = "Error" %}
+
+{% block sub_content %}
+<div class="container-fluid">
+  <div class="row row-eq-spacing">
+    <div class="col-12">
+      <h4 class="my-0">
+        <i class="fa fa-exclamation-circle mr-5"></i> {{ app.name }} Error
+      </h4>
+    </div>
+  </div>
+  <div class="row row-eq-spacing">
+    <div class="col-12">
+      <div>
+        <strong>Message:</strong> {{ message }}
+      </div>
+      <div>
+        <strong>Code:</strong> {{ code }}
+      </div>
+      <div>
+        <strong>File:</strong> {{ file }} in line {{ line }}
+      </div>
+    </div>
+  </div>
+  <div class="row row-eq-spacing">
+    <div class="col-12">
+      <div class="card text-monospace p-15">
+        {% for item in traces %}
+          <div>#{{ loop.index }}: {{ item.file }} in line {{ item.line }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="row row-eq-spacing">
+    <div class="col-12">
+      <button id="back" class="btn">
+        <i class="fa fa-chevron-left mr-5"></i> Back
+      </button>
+    </div>
+  </div>
+</div>
+{% endblock %}

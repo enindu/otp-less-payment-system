@@ -1,0 +1,106 @@
+<div class="sidebar">
+  <div class="sidebar-menu">
+    <h6 class="sidebar-title">Dashboard</h6>
+    <div class="sidebar-divider"></div>
+    <a href="/admin" class="sidebar-link sidebar-link-with-icon {{ id == "home" ? "active" }}">
+      <span class="sidebar-icon {{ id == "home" ? "bg-primary text-white" }}">
+        <i class="fa fa-home"></i>
+      </span>
+      Home
+    </a>
+    {# <a href="/admin/roles" class="sidebar-link sidebar-link-with-icon {{ id == "roles" or id == "roles.all" ? "active" }}">
+      <span class="sidebar-icon {{ id == "roles" or id == "roles.all" ? "bg-primary text-white" }}">
+        <i class="fa fa-crown"></i>
+      </span>
+      Roles
+    </a>
+    <a href="/admin/sections" class="sidebar-link sidebar-link-with-icon {{ id == "sections" or id == "sections.all" ? "active" }}">
+      <span class="sidebar-icon {{ id == "sections" or id == "sections.all" ? "bg-primary text-white" }}">
+        <i class="fa fa-chart-pie"></i>
+      </span>
+      Sections
+    </a> #}
+    <a href="/admin/accounts/profile" class="sidebar-link sidebar-link-with-icon {{ id == "accounts.profile" ? "active" }}">
+      <span class="sidebar-icon {{ id == "accounts.profile" ? "bg-primary text-white" }}">
+        <i class="fa fa-user"></i>
+      </span>
+      Profile
+    </a>
+    <a href="/admin/accounts/logout" class="sidebar-link sidebar-link-with-icon">
+      <span class="sidebar-icon">
+        <i class="fa fa-sign-out-alt"></i>
+      </span>
+      Logout
+    </a>
+    <h6 class="sidebar-title">Account</h6>
+    <div class="sidebar-divider"></div>
+    <a href="/admin/admins" class="sidebar-link sidebar-link-with-icon {{ id == "admins" or id == "admins.all" ? "active" }}">
+      <span class="sidebar-icon {{ id == "admins" or id == "admins.all" ? "bg-primary text-white" }}">
+        <i class="fa fa-shield-alt"></i>
+      </span>
+      Admins
+    </a>
+    <a href="/admin/users" class="sidebar-link sidebar-link-with-icon {{ id == "users" or id == "users.all" ? "active" }}">
+      <span class="sidebar-icon {{ id == "users" or id == "users.all" ? "bg-primary text-white" }}">
+        <i class="fa fa-users"></i>
+      </span>
+      Users
+    </a>
+    <h6 class="sidebar-title">Upload</h6>
+    <div class="sidebar-divider"></div>
+    {# <a href="/admin/contents" class="sidebar-link sidebar-link-with-icon {{ id == "contents" or id == "contents.all" or id == "contents.single" ? "active" }}">
+      <span class="sidebar-icon {{ id == "contents" or id == "contents.all" or id == "contents.single" ? "bg-primary text-white" }}">
+        <i class="fa fa-pen"></i>
+      </span>
+      Contents
+    </a> #}
+    <a href="/admin/images" class="sidebar-link sidebar-link-with-icon {{ id == "images" or id == "images.all" ? "active" }}">
+      <span class="sidebar-icon {{ id == "images" or id == "images.all" ? "bg-primary text-white" }}">
+        <i class="fa fa-image"></i>
+      </span>
+      Images
+    </a>
+    {# <a href="/admin/files" class="sidebar-link sidebar-link-with-icon {{ id == "files" or id == "files.all" ? "active" }}">
+      <span class="sidebar-icon {{ id == "files" or id == "files.all" ? "bg-primary text-white" }}">
+        <i class="fa fa-file-alt"></i>
+      </span>
+      Files
+    </a> #}
+    <h6 class="sidebar-title">Category</h6>
+    <div class="sidebar-divider"></div>
+    <a href="/admin/categories" class="sidebar-link sidebar-link-with-icon {{ id == "categories" or id == "categories.all" or id == "categories.single" ? "active" }}">
+      <span class="sidebar-icon {{ id == "categories" or id == "categories.all" or id == "categories.single" ? "bg-primary text-white" }}">
+        <i class="fa fa-cube"></i>
+      </span>
+      Categories
+    </a>
+    {# <a href="/admin/subcategories" class="sidebar-link sidebar-link-with-icon {{ id == "subcategories" or id == "subcategories.all" or id == "subcategories.single" ? "active" }}">
+      <span class="sidebar-icon {{ id == "subcategories" or id == "subcategories.all" or id == "subcategories.single" ? "bg-primary text-white" }}">
+        <i class="fa fa-cubes"></i>
+      </span>
+      Subcategories
+    </a> #}
+    <h6 class="sidebar-title">System</h6>
+    <div class="sidebar-divider"></div>
+    <a href="/admin/messages" class="sidebar-link sidebar-link-with-icon {{ id == "message" or id == "messages.all" or id == "messages.single" ? "active" }}">
+      <span class="sidebar-icon {{ id == "messages" or id == "messages.all" or id == "messages.single" ? "bg-primary text-white" }}">
+        <i class="fa fa-comment"></i>
+      </span>
+      Messages
+    </a>
+    <a href="/admin/reports" class="sidebar-link sidebar-link-with-icon {{ id == "reports" ? "active" }}">
+      <span class="sidebar-icon {{ id == "reports" ? "bg-primary text-white" }}">
+        <i class="fa fa-exclamation"></i>
+      </span>
+      Reports
+    </a>
+    <h6 class="sidebar-title">External Links</h6>
+    <div class="sidebar-divider"></div>
+    <a href="/" target="_blank" rel="noopener noreferrer" class="sidebar-link sidebar-link-with-icon">
+      <span class="sidebar-icon bg-danger text-white">
+        <i class="fa fa-external-link-alt"></i>
+      </span>
+      Website
+    </a>
+  </div>
+</div>

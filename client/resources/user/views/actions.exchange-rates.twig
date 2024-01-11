@@ -1,0 +1,78 @@
+{% extends "@user/layouts/sub.twig" %}
+
+{% set id = "actions.exchange-rates" %}
+{% set title = "Exchange Rates | Actions" %}
+
+{% block breadcrumb_content %}
+<div class="page-area">
+  <div class="breadcumb-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="breadcrumb text-center">
+          <div class="section-headline white-headline text-center">
+            <h3>Exchange Rates</h3>
+          </div>
+          <ul>
+            <li class="home-bread">Actions</li>
+            <li>Exchange Rates</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block sub_content %}
+<div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="single-curency">
+      <div class="curency-text">
+        <span class="c-country">{{ 1|format_currency("USD") }} =</span>
+        <span class="c-money">{{ usd|format_currency("LKR") }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="single-curency">
+      <div class="curency-text">
+        <span class="c-country">{{ 1|format_currency("EUR") }} =</span>
+        <span class="c-money">{{ eur|format_currency("LKR") }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="single-curency">
+      <div class="curency-text">
+        <span class="c-country">{{ 1|format_currency("GBP") }} =</span>
+        <span class="c-money">{{ gbp|format_currency("LKR") }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="single-curency">
+      <div class="curency-text">
+        <span class="c-country">{{ 1|format_currency("SAR") }} =</span>
+        <span class="c-money">{{ sar|format_currency("LKR") }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="single-curency">
+      <div class="curency-text">
+        <span class="c-country">{{ 1|format_currency("INR") }} =</span>
+        <span class="c-money">{{ inr|format_currency("LKR") }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="single-curency">
+      <div class="curency-text">
+        <span class="c-country">{{ 1|format_currency("AUD") }} =</span>
+        <span class="c-money">{{ aud|format_currency("LKR") }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

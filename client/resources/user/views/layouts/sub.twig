@@ -1,0 +1,68 @@
+{% extends "@user/layouts/base-1.twig" %}
+
+{% block base_content %}
+<div class="dsahboard-area bg-color area-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="dashboard-head">
+          <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12">
+              <div class="single-dash-head">
+                <div class="dashboard-profile">
+                  <div class="profile-content">
+                    <img src="/resources/user/assets/images/avatar.png" alt="{{ app.name }} {{ auth.user.first_name }} {{ auth.user.last_name }}">
+                    <span class="pro-name">{{ auth.user.first_name }} {{ auth.user.last_name }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+              <div class="single-dash-head">
+                <div class="dashboard-amount">
+                  <div class="amount-content">
+                    <i class="flaticon-001-money-1"></i>
+                    <span class="pro-name">{{ global.balance|format_currency("LKR") }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+              <div class="single-dash-head">
+                <div class="dashboard-amount">
+                  <div class="amount-content">
+                    <a class="edit-icon" href="/accounts/settings#change-information"><i class="ti-pencil-alt"></i></a>
+                    <i class="flaticon-026-businessman-2"></i>
+                    <span class="pro-name">Change Information</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+              <div class="single-dash-head">
+                <div class="dashboard-amount">
+                  <div class="amount-content">
+                    <a class="edit-icon" href="/accounts/settings#change-password"><i class="ti-pencil-alt"></i></a>
+                    <i class="flaticon-042-security"></i>
+                    <span class="pro-name">Change Password</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-xs-12">
+        {% include "@user/includes/sidebar.twig" %}
+      </div>
+      <div class="col-md-9 col-sm-9 col-xs-12">
+        <div class="dashboard-content">
+          {% block sub_content %}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

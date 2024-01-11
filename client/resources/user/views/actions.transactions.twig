@@ -1,0 +1,63 @@
+{% extends "@user/layouts/sub.twig" %}
+
+{% set id = "actions.transactions" %}
+{% set title = "Transactions | Actions" %}
+
+{% block breadcrumb_content %}
+<div class="page-area">
+  <div class="breadcumb-overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="breadcrumb text-center">
+          <div class="section-headline white-headline text-center">
+            <h3>Transactions</h3>
+          </div>
+          <ul>
+            <li class="home-bread">Actions</li>
+            <li>Transactions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block sub_content %}
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="send-money-form transection-log">
+      <div class="form-text">
+        <h4 class="form-top">Transactions</h4>
+        <div class="form-inner table-inner">
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Receiver</th>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Description</th>
+            </tr>
+            {% for item in transactions %}
+              <tr>
+                <td>{{ item.unique_id }}</td>
+                <td>{{ item.receiver_account }}</td>
+                <td>{{ item.type }}</td>
+                <td>{{ item.amount|format_currency("LKR") }}</td>
+                <td>{{ item.description != null ? item.description : "N/A" }}</td>
+              </tr>
+            {% else %}
+              <tr>
+                <td colspan="5">
+                  <div class="text-center">No transactions found!</div>
+                </td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

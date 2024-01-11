@@ -1,0 +1,6 @@
+.parcel-cache/
+cache/routes/*
+cache/views/*
+logs/*
+node_modules/
+vendor/

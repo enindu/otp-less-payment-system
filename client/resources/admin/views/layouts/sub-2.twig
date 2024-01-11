@@ -1,0 +1,11 @@
+{% extends "@admin/layouts/base.twig" %}
+
+{% block base_content %}
+<div class="page-wrapper with-navbar with-sidebar">
+  {% include "@admin/includes/header.twig" %}
+  {% include "@admin/includes/sidebar.twig" %}
+  <div class="content-wrapper">
+    {% block sub_content %}{% endblock %}
+  </div>
+</div>
+{% endblock %}

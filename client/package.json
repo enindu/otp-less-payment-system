@@ -1,0 +1,46 @@
+{
+  "name": "slender",
+  "description": "Developer-friendly, low-level, rapid web development environment, based on Slim framework",
+  "keywords": [
+    "php",
+    "slender",
+    "slim",
+    "php-di",
+    "eloquent",
+    "twig",
+    "swift-mailer",
+    "parsedown"
+  ],
+  "version": "0.3.3-dev",
+  "license": "MIT",
+  "homepage": "https://github.com/enindu/slender",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enindu/slender.git"
+  },
+  "bugs": {
+    "url": "https://github.com/enindu/slender/issues"
+  },
+  "author": {
+    "name": "Enindu Alahapperuma",
+    "email": "enindu@gmail.com",
+    "url": "https://enindu.com"
+  },
+  "private": true,
+  "scripts": {
+    "slender": "echo \"Slender - Developer-friendly, low-level, rapid web development environment based on Slim framework\"",
+    "bundle-admin-css": "parcel build \"sources/assets/admin/css/*.css\" --dist-dir \"resources/admin/assets/css\" --public-url \"./\"",
+    "bundle-admin-js": "parcel build \"sources/assets/admin/js/*.js\" --dist-dir \"resources/admin/assets/js\" --public-url \"./\"",
+    "bundle-user-css": "parcel build \"sources/assets/user/css/*.css\" --dist-dir \"resources/user/assets/css\" --public-url \"./\"",
+    "bundle-user-js": "parcel build \"sources/assets/user/js/*.js\" --dist-dir \"resources/user/assets/js\" --public-url \"./\"",
+    "bundle-common-css": "parcel build \"sources/assets/common/css/*.css\" --dist-dir \"resources/common/assets/css\" --public-url \"./\"",
+    "bundle-common-js": "parcel build \"sources/assets/common/js/*.js\" --dist-dir \"resources/common/assets/js\" --public-url \"./\""
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "halfmoon": "^1.1.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-nightly.610"
+  }
+}

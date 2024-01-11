@@ -1,0 +1,14 @@
+{% extends "@common/layouts/sub-2.twig" %}
+
+{% set id = "message" %}
+{% set title = "Message" %}
+
+{% block sub_content %}
+<div class="font-size-100">
+  <i class="fa fa-exclamation-circle"></i>
+</div>
+<div class="text-center">
+  <div class="mb-10">{{ message }}</div>
+  <div><a href="/accounts/profile" class="btn">Okay</a></div>
+</div>
+{% endblock %}

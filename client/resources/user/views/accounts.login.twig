@@ -1,0 +1,42 @@
+{% extends "@user/layouts/base-2.twig" %}
+
+{% set id = "accounts.login" %}
+{% set title = "Login | Accounts" %}
+
+{% block base_content %}
+<div class="login-area area-padding fix">
+  <div class="login-overlay"></div>
+  <div class="table">
+    <div class="table-cell">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-12">
+            <div class="login-form signup-form">
+              <h4 class="login-title text-center">LOGIN</h4>
+              <div class="row">
+                <form method="post" action="/accounts/login" class="log-form">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <input type="email" class="form-control" placeholder="Enter Your Email" maxlength="191" name="email" required>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <input type="password" class="form-control" placeholder="Enter Your Password" minlength="6" maxlength="32" name="password" required>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                    <button type="submit" class="slide-btn login-btn">Login</button>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="clear"></div>
+                    <div class="sign-icon">
+                      <div class="acc-not">Don't have an account? <a href="/accounts/register">Register</a></div>
+                    </div>
+                  </div>
+                </form> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "@admin/layouts/sub-2.twig" %}
+
+{% set id = "home" %}
+{% set title = "Dashboard" %}
+
+{% block sub_content %}
+<div class="container-fluid h-full">
+  <div class="row justify-content-center align-items-center h-full">
+    <div class="col-auto text-center">
+      <img src="/resources/admin/assets/images/logo.svg" alt="{{ app.name }}" width="150" height="150">
+      <h2 class="my-0">{{ app.name|title }} {{ app.version }}</h2>
+      <div>{{ app.description }}</div>
+    </div>
+  </div>
+</div>
+{% endblock %}
